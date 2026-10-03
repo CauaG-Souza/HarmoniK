@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avaliar - HarmoniK</title>
+</head>
+<body>
+    <header>
+        <h1>HarmoniK</h1>
+        <p>Chegou a hora de avaliar algo!</p>
+    </header>
+    <main>
+        <form>
+
+            <label for="tipo">O que está avaliando?:</label>
+            <select id="tipo" name="tipo">
+                <option value="album">Álbum</option>
+                <option value="musica">Música</option>
+                <option value="artista">Artista</option>
+            </select>
+            <br>
+            <label for ="qual">Qual?:</label>
+            <select id="qual" name="qual">
+                <option value="album1">Álbum 1</option>
+                <option value="album2">Música 2</option>
+                <option value="album3">Artista 3</option>
+            </select>
+            <br>
+            <label for="avaliacao">Avaliação:</label>
+            <select id="avaliacao" name="avaliacao">
+                <option value="0">☆☆☆☆☆</option>
+                <option value="1">★☆☆☆☆</option>
+                <option value="2">★★☆☆☆</option>
+                <option value="3">★★★☆☆</option>
+                <option value="4">★★★★☆</option>
+                <option value="5">★★★★★</option>
+            </select>
+            <br>
+        </form>
+        <br>
+        <label for="comentario"></label>
+        <textarea id="comentario" name="comentario" rows="4" cols="50"></textarea>
+        <br>
+        <input type="submit" value="Enviar avaliação">
+    </main>
+    <footer>
+        <p>&copy; 2026 HarmoniK. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
