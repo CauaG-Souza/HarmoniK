@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HarmoniK - Explorar músicas</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>HarmoniK</h1>
+
+        <nav>
+            <a href="inicio.html">Início</a>
+            <a href="musicas.html">Explorar</a>
+            <a href="avaliar.html">Avaliações</a>
+            <a href="perfil.html">Perfil</a>
+            <a href="cadastro-musica.html">Cadastrar música</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <h2>Explorar músicas</h2>
+
+        <section>
+
+            <h3>Pesquisar</h3>
+
+            <form action="musicas.html" method="get">
+
+                <label for="pesquisa">
+                    Nome da música, artista ou álbum
+                </label>
+
+                <input
+                    type="search"
+                    id="pesquisa"
+                    name="pesquisa"
+                    placeholder="Pesquisar..."
+                >
+
+                <button type="submit">Pesquisar</button>
+
+            </form>
+
+        </section>
+
+        <section>
+
+            <h3>Filtros</h3>
+
+            <form action="musicas.html" method="get">
+
+                <label for="genero">Gênero</label>
+
+                <select id="genero" name="genero">
+
+                    <option value="">Todos</option>
+                    <option value="pop">Pop</option>
+                    <option value="rock">Rock</option>
+                    <option value="rap">Rap</option>
+                    <option value="mpb">MPB</option>
+                    <option value="sertanejo">Sertanejo</option>
+                    <option value="eletronica">Eletrônica</option>
+                    <option value="outro">Outro</option>
+
+                </select>
+
+                <label for="ano">
+                    Ano de lançamento
+                </label>
+
+                <select id="ano" name="ano">
+
+                    <option value="">Todos</option>
+                    <option value="2020">2020</option>
+                    <option value="2010">2010-2019</option>
+                    <option value="2000">2000-2009</option>
+                    <option value="1990">1990-1999</option>
+                    <option value="1980">1980-1989</option>
+                    <option value="1970">1970-1979</option>
+
+                </select>
+
+                <button type="submit">Aplicar filtros</button>
+
+            </form>
+
+        </section>
+
+        <section>
+
+            <h3>Ordenar por</h3>
+
+            <form action="musicas.html" method="get">
+
+                <select id="ordenacao" name="ordenacao">
+
+                    <option value="nome">
+                        Nome
+                    </option>
+
+                    <option value="artista">
+                        Artista
+                    </option>
+
+                    <option value="ano">
+                        Ano de lançamento
+                    </option>
+
+                    <option value="nota">
+                        Melhor avaliação
+                    </option>
+
+                </select>
+
+                <button type="submit">Ordenar</button>
+
+            </form>
+
+        </section>
+
+        <section>
+
+            <h3>Músicas encontradas</h3>
+
+            <article>
+
+                <h4>Blinding Lights</h4>
+
+                <p>Artista: The Weeknd</p>
+                <p>Álbum: After Hours</p>
+                <p>Gênero: Pop</p>
+                <p>Ano: 2020</p>
+                <p>Avaliação: ★★★★★</p>
+
+                <a href="musica.html">
+                    Ver detalhes
+                </a>
+
+                <a href="editar-musica.html">
+                    Editar
+                </a>
+
+                <a href="excluir-musica.html">
+                    Excluir
+                </a>
+
+            </article>
+
+            <article>
+
+                <h4>Bohemian Rhapsody</h4>
+
+                <p>Artista: Queen</p>
+                <p>Álbum: A Night at the Opera</p>
+                <p>Gênero: Rock</p>
+                <p>Ano: 1975</p>
+                <p>Avaliação: ★★★★★</p>
+
+                <a href="musica.html">
+                    Ver detalhes
+                </a>
+
+                <a href="editar-musica.html">
+                    Editar
+                </a>
+
+                <a href="excluir-musica.html">
+                    Excluir
+                </a>
+
+            </article>
+
+            <article>
+
+                <h4>Lose Yourself</h4>
+
+                <p>Artista: Eminem</p>
+                <p>Álbum: 8 Mile</p>
+                <p>Gênero: Rap</p>
+                <p>Ano: 2002</p>
+                <p>Avaliação: ★★★★★</p>
+
+                <a href="musica.html">
+                    Ver detalhes
+                </a>
+
+                <a href="editar-musica.html">
+                    Editar
+                </a>
+
+                <a href="excluir-musica.html">
+                    Excluir
+                </a>
+
+            </article>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 HarmoniK</p>
+    </footer>
+
+</body>
+
+</html>
