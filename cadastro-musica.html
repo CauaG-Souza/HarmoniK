@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HarmoniK - Cadastrar música</title>
+</head>
+
+<body>
+
+    <header>
+
+        <h1>HarmoniK</h1>
+
+        <nav>
+            <a href="inicio.html">Início</a>
+            <a href="musicas.html">Explorar</a>
+            <a href="avaliar.html">Avaliações</a>
+            <a href="perfil.html">Perfil</a>
+        </nav>
+
+    </header>
+
+    <main>
+
+        <section>
+
+            <h2>Cadastrar música</h2>
+
+            <form action="musicas.html" method="get">
+
+                <div>
+
+                    <label for="nome">
+                        Nome da música
+                    </label>
+
+                    <input
+                        type="text"
+                        id="nome"
+                        name="nome"
+                        required
+                    >
+
+                </div>
+
+                <div>
+
+                    <label for="artista">
+                        Artista
+                    </label>
+
+                    <input
+                        type="text"
+                        id="artista"
+                        name="artista"
+                        required
+                    >
+
+                </div>
+
+                <div>
+
+                    <label for="album">
+                        Álbum
+                    </label>
+
+                    <input
+                        type="text"
+                        id="album"
+                        name="album"
+                        required
+                    >
+
+                </div>
+
+                <div>
+
+                    <label for="genero">
+                        Gênero
+                    </label>
+
+                    <select
+                        id="genero"
+                        name="genero"
+                        required
+                    >
+
+                        <option value="">
+                            Selecione
+                        </option>
+
+                        <option value="pop">
+                            Pop
+                        </option>
+
+                        <option value="rock">
+                            Rock
+                        </option>
+
+                        <option value="rap">
+                            Rap
+                        </option>
+
+                        <option value="mpb">
+                            MPB
+                        </option>
+
+                        <option value="sertanejo">
+                            Sertanejo
+                        </option>
+
+                        <option value="eletronica">
+                            Eletrônica
+                        </option>
+
+                        <option value="outro">
+                            Outro
+                        </option>
+
+                    </select>
+
+                </div>
+
+                <div>
+
+                    <label for="ano">
+                        Ano de lançamento
+                    </label>
+
+                    <input
+                        type="number"
+                        id="ano"
+                        name="ano"
+                        min="1900"
+                        max="2100"
+                        required
+                    >
+
+                </div>
+
+                <div>
+
+                    <label for="nota">
+                        Avaliação
+                    </label>
+
+                    <select
+                        id="nota"
+                        name="nota"
+                        required
+                    >
+
+                        <option value="">
+                            Selecione
+                        </option>
+
+                        <option value="1">
+                            ★☆☆☆☆
+                        </option>
+
+                        <option value="2">
+                            ★★☆☆☆
+                        </option>
+
+                        <option value="3">
+                            ★★★☆☆
+                        </option>
+
+                        <option value="4">
+                            ★★★★☆
+                        </option>
+
+                        <option value="5">
+                            ★★★★★
+                        </option>
+
+                    </select>
+
+                </div>
+
+                <button type="submit">
+                    Cadastrar música
+                </button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 HarmoniK</p>
+    </footer>
+
+</body>
+
+</html>
