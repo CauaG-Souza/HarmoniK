@@ -2,6 +2,15 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+
 :root {
     --cor-fundo: #17191B;
     --cor-superficie: #222725;
@@ -20,12 +29,19 @@
         #22C55E
     );
 
+    --gradiente-secundario: linear-gradient(
+        135deg,
+        #17191B,
+        #2e2d35,
+        #17191B
+    );
+
     --borda-card: rgba(255, 255, 255, 0.12);
     --sombra-card: 0 8px 32px rgba(0, 0, 0, 0.25);
 }
 
 body {
-    background-color: var(--cor-fundo);
+    background: var(--gradiente-secundario);
     color: var(--cor-texto);
     font-family: "Raleway", sans-serif;
     font-optical-sizing: auto;
@@ -67,6 +83,75 @@ footer {
     padding: 20px;
     margin-top: 50px;
     text-align: center;
+}
+
+.header {
+    position: relative;
+    z-index: 100;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+
+    width: 100%;
+    padding: 22px max(5%, calc((100% - 1200px) / 2));
+
+    background: rgba(23, 25, 27, 0.88);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+}
+.logo {
+    flex-shrink: 0;
+    color: var(--cor-texto);
+    font-size: 29px;
+    font-weight: 800;
+    letter-spacing: -1.5px;
+    text-decoration: none;
+}
+.logo > span:first-child {
+    color: var(--cor-destaque);
+}
+
+.logo .logo-ponto {
+    color: var(--cor-destaque);
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 22px;
+
+    margin-top: 0;
+    padding: 28px max(5%, calc((100% - 1200px) / 2));
+
+    background: rgba(15, 17, 16, 0.7);
+    border-top: 1px solid var(--borda-card);
+}
+
+.logo-footer {
+    font-size: 23px;
+}
+
+.footer p {
+    margin: 0;
+
+    color: var(--cor-texto-secundario);
+    font-size: 11px;
+    line-height: 1.8;
+}
+
+.footer-voltar {
+    color: var(--cor-texto);
+    font-size: 11px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.footer-voltar:hover {
+    color: var(--cor-destaque);
 }
 
 @media (max-width: 768px) {
