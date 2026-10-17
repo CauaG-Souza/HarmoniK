@@ -102,6 +102,7 @@ footer {
     backdrop-filter: blur(18px);
     -webkit-backdrop-filter: blur(18px);
 }
+
 .logo {
     flex-shrink: 0;
     color: var(--cor-texto);
@@ -110,6 +111,7 @@ footer {
     letter-spacing: -1.5px;
     text-decoration: none;
 }
+
 .logo > span:first-child {
     color: var(--cor-destaque);
 }
@@ -118,13 +120,112 @@ footer {
     color: var(--cor-destaque);
 }
 
+.menu-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+
+    width: 46px;
+    height: 46px;
+    padding: 10px;
+
+    background: rgba(34, 197, 94, 0.1);
+    border: 1px solid rgba(34, 197, 94, 0.25);
+    border-radius: 12px;
+
+    cursor: pointer;
+    transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.menu-btn:hover {
+    background: rgba(34, 197, 94, 0.2);
+    border-color: var(--cor-destaque);
+}
+
+.menu-btn span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    border-radius: 5px;
+    background: var(--cor-texto);
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.header .menu {
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 5px;
+
+    position: absolute;
+    top: calc(100% + 12px);
+    right: max(5%, calc((100% - 1200px) / 2));
+    z-index: 1000;
+
+    width: 260px;
+    max-width: calc(100vw - 32px);
+    padding: 10px;
+
+    background: #202522;
+    border: 1px solid var(--borda-card);
+    border-radius: 16px;
+    box-shadow: 0 20px 55px rgba(0, 0, 0, 0.45);
+}
+
+.header .menu.ativo {
+    display: flex;
+    animation: menu-entrada 0.2s ease both;
+}
+
+.menu-link {
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+    padding: 13px 14px;
+
+    color: var(--cor-texto-secundario);
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+
+    border-radius: 9px;
+    transition: color 0.2s ease, background 0.2s ease;
+}
+
+.menu-link:hover,
+.menu-link-ativo {
+    color: var(--cor-texto);
+    background: rgba(34, 197, 94, 0.1);
+}
+
+.menu-link-ativo {
+    box-shadow: inset 3px 0 var(--cor-destaque);
+}
+
+.menu-link-destaque {
+    justify-content: center;
+    margin-top: 5px;
+
+    color: #101810;
+    background: var(--gradiente-principal);
+}
+
+.menu-link-destaque:hover {
+    color: #101810;
+    background: var(--gradiente-principal);
+    filter: brightness(1.08);
+}
+
 .footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 22px;
 
-    margin-top: 0;
+    margin-top: 10;
     padding: 28px max(5%, calc((100% - 1200px) / 2));
 
     background: rgba(15, 17, 16, 0.7);

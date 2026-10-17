@@ -4,154 +4,110 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HarmoniK - Cadastrar música</title>
+
+    <title>HarmoniK | Descubra novos sons</title>
+
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/cadastrar-musica.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <script src="../assets/js/menu.js" defer></script>
 </head>
 
 <body>
 
-    <header>
-        
-        <h1>HarmoniK</h1>
+    <header class="header">
 
-        <nav>
-            <a href="inicio.html">Início</a>
-            <a href="musicas.html">Explorar</a>
-            <a href="avaliar.html">Avaliações</a>
-            <a href="perfil.html">Perfil</a>
-            <a href="cadastro-musica.html">Cadastrar música</a>
+        <a href="inicio.html" class="logo">
+            Harmoni<span>K</span><span class="logo-ponto">.</span>
+        </a>
+
+        <button
+            class="menu-btn"
+            id="menu-btn"
+            type="button"
+            aria-label="Abrir menu"
+            aria-controls="menu"
+            aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav class="menu" id="menu">
+            <a href="inicio.html" class="menu-link">Início</a>
+            <a href="musicas.html" class="menu-link">Explorar</a>
+            <a href="avaliar.html" class="menu-link">Avaliações</a>
+            <a href="perfil.html" class="menu-link">Perfil</a>
+            <a href="cadastro-musica.html" class="menu-link menu-link-destaque">
+                + Cadastrar música
+            </a>
         </nav>
+
     </header>
 
-    <main>
+    <main class="main">
 
-        <section>
+        <section class="secao-cadastro">
+            <h1>Cadastrar música</h1>
 
-            <h2>Cadastrar música</h2>
+            <form action="musicas.html" method="get" class="form-cadastro">
 
-            <form action="musicas.html" method="get">
-
-                <div>
-
-                    <label for="nome">
-                        Nome da música
-                    </label>
-
-                    <input
-                        type="text"
-                        id="nome"
-                        name="nome"
-                        required
-                    >
-
+                <div class="campo">
+                    <label for="nome">Nome da música</label>
+                    <input type="text" id="nome" name="nome" required>
                 </div>
 
-                <div>
-
-                    <label for="artista">
-                        Artista
-                    </label>
-
-                    <input
-                        type="text"
-                        id="artista"
-                        name="artista"
-                        required
-                    >
-
+                <div class="campo">
+                    <label for="artista">Artista</label>
+                    <input type="text" id="artista" name="artista" required>
                 </div>
 
-                <div>
-
-                    <label for="album">
-                        Álbum
-                    </label>
-
-                    <input
-                        type="text"
-                        id="album"
-                        name="album"
-                        required
-                    >
-
+                <div class="campo">
+                    <label for="album">Álbum</label>
+                    <input type="text" id="album" name="album" required>
                 </div>
 
-                <div>
-
-                    <label for="genero">
-                        Gênero
-                    </label>
-
-                    <select
-                        id="genero"
-                        name="genero"
-                        required
-                    >
-
-                        <option value="">
-                            Selecione
-                        </option>
-
-                        <option value="pop">
-                            Pop
-                        </option>
-
-                        <option value="rock">
-                            Rock
-                        </option>
-
-                        <option value="rap">
-                            Rap
-                        </option>
-
-                        <option value="mpb">
-                            MPB
-                        </option>
-
-                        <option value="sertanejo">
-                            Sertanejo
-                        </option>
-
-                        <option value="eletronica">
-                            Eletrônica
-                        </option>
-
-                        <option value="outro">
-                            Outro
-                        </option>
-
+                <div class="campo">
+                    <label for="genero">Gênero</label>
+                    <select id="genero" name="genero" required>
+                        <option value="">Selecione</option>
+                        <option value="pop">Pop</option>
+                        <option value="rock">Rock</option>
+                        <option value="rap">Rap</option>
+                        <option value="mpb">MPB</option>
+                        <option value="sertanejo">Sertanejo</option>
+                        <option value="eletronica">Eletrônica</option>
+                        <option value="outro">Outro</option>
                     </select>
-
                 </div>
 
-                <div>
-
-                    <label for="ano">
-                        Ano de lançamento
-                    </label>
-
-                    <input
-                        type="number"
-                        id="ano"
-                        name="ano"
-                        min="1900"
-                        max="2100"
-                        required
-                    >
-
+                <div class="campo">
+                    <label for="ano">Ano de lançamento</label>
+                    <input type="number" id="ano" name="ano" min="1900" max="2100" required>
                 </div>
 
-                <button type="submit">
-                    Cadastrar música
-                </button>
+                <button type="submit" class="botao">Cadastrar música</button>
 
             </form>
-
         </section>
 
     </main>
 
-    <footer>
-        <p>&copy; 2026 HarmoniK</p>
+    <footer class="footer">
+        <a class="logo logo-footer">
+            Harmoni<span>K</span><span class="logo-ponto">.</span>
+        </a>
+
+        <p>Feito para quem sente a música. © 2026 HarmoniK.</p>
+
+        <a href="#topo" class="footer-voltar"
+           onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">
+            Voltar ao topo ↑
+        </a>
     </footer>
 
 </body>

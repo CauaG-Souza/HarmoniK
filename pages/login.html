@@ -5,18 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - HarmoniK</title>
     <link rel="stylesheet" href="../assets/css/main.css" />
+    <link rel="stylesheet" href="../assets/css/login.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>Login - HarmoniK</h1>
+    <header class="header">
+
+        <a class="logo">
+            Harmoni<span>K</span><span class="logo-ponto">.</span>
+        </a>
+        <nav class="menu">
+                <a class="btn-animado" href="../index.html">Início</a>
+                <a class="btn-animado" href="cadastro.html">Cadastro</a>
+            </ul>
+        </nav>
     </header>
-    <main>
-        <section>
-            <h2>Formulário de Login</h2>
-            <form action="inicio.html" method="get">
+    <main class="main">
+        <section class="info-container">
+            <div class="form-head">
+                <h2>Formulário de Login</h2>
+            </div>
+            <div class="form-main">
+            <form class="login" action="inicio.html" method="get">
                 <label for="email">Email:</label>
                 <input type="email" 
                         id="email" 
@@ -33,10 +45,20 @@
 
                 <button type="submit">Entrar</button>
             </form>
+        </div>
         </section>
     </main>
-    <footer>
-        <p>&copy; 2026 HarmoniK. Todos os direitos reservados.</p>
+    <footer class="footer">
+        <a class="logo logo-footer">
+            Harmoni<span>K</span><span class="logo-ponto">.</span>
+        </a>
+
+        <p>Feito para quem sente a música. © 2026 HarmoniK.</p>
+
+        <a href="#topo" class="footer-voltar"
+           onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">
+            Voltar ao topo ↑
+        </a>
     </footer>
 </body>
 </html>

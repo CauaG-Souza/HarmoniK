@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HarmoniK | Descubra novos sons</title>
+
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/inicio.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <script src="../assets/js/menu.js" defer></script>
+</head>
+
+<body>
+    <header class="header">
+
+        <a href="inicio.html" class="logo">
+            Harmoni<span>K</span><span class="logo-ponto">.</span>
+        </a>
+
+        <button
+            class="menu-btn"
+            id="menu-btn"
+            type="button"
+            aria-label="Abrir menu"
+            aria-controls="menu"
+            aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav class="menu" id="menu">
+            <a href="inicio.html" class="menu-link menu-link-ativo">Início</a>
+            <a href="musicas.html" class="menu-link">Explorar</a>
+            <a href="avaliar.html" class="menu-link">Avaliações</a>
+            <a href="perfil.html" class="menu-link">Perfil</a>
+            <a href="cadastro-musica.html" class="menu-link menu-link-destaque">
+                + Cadastrar música
+            </a>
+        </nav>
+
+    </header>
+    <main class="main">
+
+            <section class="hero">
+                <h1>Seu mundo. Seu ritmo. Sua música.</h1>
+                <p>Descubra artistas, explore novos sons e compartilhe suas opiniões.</p>
+                <div>
+                    <a href="musicas.html" class="botao">Explorar músicas</a>
+                    <a href="#destaques" class="botao">Descobrir destaques</a>
+                </div>
+            </section>
+
+            <section class="beneficios">
+                <article class="beneficio">
+                    <h3>Descubra</h3>
+                    <p>Encontre músicas e artistas novos.</p>
+                </article>
+
+                <article class="beneficio">
+                    <h3>Avalie</h3>
+                    <p>Dê sua nota e compartilhe sua opinião.</p>
+                </article>
+
+                <article class="beneficio">
+                    <h3>Conecte-se</h3>
+                    <p>Compartilhe sua paixão pela música.</p>
+                </article>
+            </section>
+
+            <section class="destaques" id="destaques">
+                <h2>Em destaque</h2>
+                <p>Clássicos inesquecíveis e sons que merecem entrar na sua playlist.</p>
+
+                <div class="musicas-grid">
+
+                    <article class="musica-card">
+                        <h3>Blinding Lights</h3>
+                        <p>Gênero: POP</p>
+                        <p>Artista: The Weeknd</p>
+                        <p>Álbum: After Hours</p>
+                        <p>Nota: ★★★★★ (5.0)</p>
+                        <a href="musica.html">Ver detalhes</a>
+                    </article>
+
+                    <article class="musica-card">
+                        <h3>Bohemian Rhapsody</h3>
+                        <p>Gênero: ROCK</p>
+                        <p>Artista: Queen</p>
+                        <p>Álbum: A Night at the Opera</p>
+                        <p>Nota: ★★★★★ (5.0)</p>
+                        <a href="musica.html">Ver detalhes</a>
+                    </article>
+
+                    <article class="musica-card">
+                        <h3>Lose Yourself</h3>
+                        <p>Gênero: RAP</p>
+                        <p>Artista: Eminem</p>
+                        <p>Álbum: 8 Mile</p>
+                        <p>Nota: ★★★★★ (5.0)</p>
+                        <a href="musica.html">Ver detalhes</a>
+                    </article>
+
+                </div>
+
+                <a class="ver-mais" href="musicas.html">Ver todas as músicas</a>
+            </section>
+
+            <section class="chamada-final">
+                <h2>Seu gosto musical merece ser compartilhado.</h2>
+                <p>Explore o catálogo, descubra novos sons e deixe sua opinião.</p>
+                <a href="musicas.html" class="botao">Começar a explorar</a>
+            </section>
+
+        </main>
+
+        <footer class="footer">
+        <a class="logo logo-footer">
+            Harmoni<span>K</span><span class="logo-ponto">.</span>
+        </a>
+
+        <p>Feito para quem sente a música. © 2026 HarmoniK.</p>
+
+        <a href="#topo" class="footer-voltar"
+           onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">
+            Voltar ao topo ↑
+        </a>
+    </footer>
+
+</body>
+
+</html>

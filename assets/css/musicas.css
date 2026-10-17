@@ -1,0 +1,172 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.main {
+    flex: 1;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.main h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.botao {
+    display: inline-block;
+    color: var(--cor-texto);
+    background: var(--gradiente-principal);
+    padding: 10px 18px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.botao:hover {
+    transition: all 0.3s ease;
+    transform: translateY(-2px);
+}
+
+.secao-busca,
+.secao-filtros,
+.secao-resultados {
+    margin-bottom: 30px;
+    padding: 20px;
+    border: 0.5px solid var(--borda-card);
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+.secao-busca h3,
+.secao-filtros h3,
+.secao-resultados h2 {
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.form-busca label,
+.form-filtros label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: var(--cor-texto-secundario);
+}
+
+.campo-grupo {
+    display: flex;
+    gap: 10px;
+}
+
+input[type="search"],
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--borda-card);
+    border-radius: 6px;
+    background: rgba(0, 0, 0, 0.3);
+    color: var(--cor-texto);
+}
+
+.form-filtros {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    gap: 15px;
+}
+
+.form-filtros .campo {
+    flex: 1;
+    min-width: 180px;
+}
+
+.musicas-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.musica-card {
+    padding: 20px;
+    border: 0.5px solid var(--borda-card);
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+}
+
+.musica-card:hover {
+    border: 1px solid white;
+    transition: all 0.3s ease;
+    transform: translateY(-2px);
+}
+
+.musica-card h4 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.musica-card p {
+    font-size: 14px;
+    margin: 4px 0;
+    color: var(--cor-texto-secundario);
+}
+
+.card-acoes {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.card-acoes a {
+    font-size: 12px;
+    color: var(--cor-destaque);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.card-acoes a:hover {
+    text-decoration: underline;
+}
+
+.footer {
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid var(--borda-card);
+    background: rgba(15, 17, 16, 0.7);
+}
+
+.footer p {
+    margin: 0;
+    font-size: 12px;
+    color: var(--cor-texto-secundario);
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+    }
+
+    .menu {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .campo-grupo {
+        flex-direction: column;
+    }
+
+    .musicas-grid {
+        grid-template-columns: 1fr;
+    }
+}
