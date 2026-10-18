@@ -1,21 +1,4 @@
 
-.menu a {
-    text-align: center;
-    text-justify: center;
-    text-decoration: none;
-    color: var(--cor-texto);
-    background-color: rgb(43, 42, 40);
-    width: 100px;
-    height: 50px;
-    padding: 15px;
-    border-radius: 5px;
-    box-shadow: var(--sombra-card);
-}
-
-.menu p {
-    margin-top: 0;
-}
-
 .main {
     display: grid;
     grid-template-columns: repeat(1, 800px);

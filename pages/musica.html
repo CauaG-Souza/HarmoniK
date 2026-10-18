@@ -4,81 +4,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HarmoniK - Detalhes da música</title>
+    <title>Detalhes - HarmoniK</title>
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <link rel="stylesheet" href="../assets/css/musica.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="../assets/js/menu.js" defer></script>
 </head>
-
 <body>
+    <header class="header">
 
-    <header>
+        <a href="inicio.html" class="logo">
+            Harmoni<span>K</span><span class="logo-ponto">.</span>
+        </a>
 
-        <h1>HarmoniK</h1>
+        <button
+            class="menu-btn"
+            id="menu-btn"
+            type="button"
+            aria-label="Abrir menu"
+            aria-controls="menu"
+            aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
 
-        <nav>
-            <a href="inicio.html">Início</a>
-            <a href="musicas.html">Explorar</a>
-            <a href="avaliar.html">Avaliações</a>
-            <a href="perfil.html">Perfil</a>
-            <a href="cadastro-musica.html">Cadastrar música</a>
+        <nav class="menu" id="menu">
+            <a href="inicio.html" class="menu-link menu-link-ativo">Início</a>
+            <a href="musicas.html" class="menu-link">Explorar</a>
+            <a href="avaliar.html" class="menu-link">Avaliações</a>
+            <a href="perfil.html" class="menu-link">Perfil</a>
+            <a href="cadastro-musica.html" class="menu-link menu-link-destaque">
+                + Cadastrar música
+            </a>
+            <a href="../index.html" class="menu-link menu-link-sair">
+                Sair
+            </a>
         </nav>
 
     </header>
 
-    <main>
+    <main class="main">
 
-        <section>
+        <section class="secao-detalhes">
+            <h1>Blinding Lights</h1>
 
-            <h2>Blinding Lights</h2>
-
-            <p>
-                <strong>Artista:</strong>
-                The Weeknd
-            </p>
-
-            <p>
-                <strong>Álbum:</strong>
-                After Hours
-            </p>
-
-            <p>
-                <strong>Gênero:</strong>
-                Pop
-            </p>
-
-            <p>
-                <strong>Ano de lançamento:</strong>
-                2020
-            </p>
-
-            <p>
-                <strong>Avaliação:</strong>
-                ★★★★★
-            </p>
-
+            <div class="info-grupo">
+                <p><strong>Artista:</strong> The Weeknd</p>
+                <p><strong>Álbum:</strong> After Hours</p>
+                <p><strong>Gênero:</strong> Pop</p>
+                <p><strong>Ano de lançamento:</strong> 2020</p>
+                <p class="avaliacao"><strong>Avaliação:</strong> ★★★★★</p>
+            </div>
         </section>
 
-        <section>
-
+        <section class="secao-acoes">
             <h3>Ações</h3>
 
-            <a href="editar-musica.html">
-                Editar música
-            </a>
-
-            <a href="excluir-musica.html">
-                Excluir música
-            </a>
-
-            <a href="musicas.html">
-                Voltar para músicas
-            </a>
-
+            <div class="acoes-grid">
+                <a href="#" class="botao">Editar música</a>
+                <a href="#" class="botao botao-perigo">Excluir música</a>
+                <a href="musicas.html" class="link-voltar">Voltar para músicas</a>
+            </div>
         </section>
 
     </main>
 
-    <footer>
-        <p>&copy; 2026 HarmoniK</p>
+    <footer class="footer">
+        <a class="logo logo-footer">
+            Harmoni<span>K</span><span class="logo-ponto">.</span>
+        </a>
+
+        <p>Feito para quem sente a música. © 2026 HarmoniK.</p>
+
+        <a href="#topo" class="footer-voltar"
+           onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">
+            Voltar ao topo ↑
+        </a>
     </footer>
+
 
 </body>
 

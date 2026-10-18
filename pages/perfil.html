@@ -4,224 +4,176 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Perfil - HarmoniK</title>
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <link rel="stylesheet" href="../assets/css/perfil.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="../assets/js/menu.js" defer></script>
 </head>
-
 <body>
-    <header>
+    <header class="header">
 
-        
-        <h1>HarmoniK</h1>
+        <a href="inicio.html" class="logo">
+            Harmoni<span>K</span><span class="logo-ponto">.</span>
+        </a>
 
-        <nav>
-            <a href="inicio.html">Início</a>
-            <a href="musicas.html">Explorar</a>
-            <a href="avaliar.html">Avaliações</a>
-            <a href="perfil.html">Perfil</a>
-            <a href="cadastro-musica.html">Cadastrar música</a>
+        <button
+            class="menu-btn"
+            id="menu-btn"
+            type="button"
+            aria-label="Abrir menu"
+            aria-controls="menu"
+            aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav class="menu" id="menu">
+            <a href="inicio.html" class="menu-link menu-link-ativo">Início</a>
+            <a href="musicas.html" class="menu-link">Explorar</a>
+            <a href="avaliar.html" class="menu-link">Avaliações</a>
+            <a href="perfil.html" class="menu-link">Perfil</a>
+            <a href="cadastro-musica.html" class="menu-link menu-link-destaque">
+                + Cadastrar música
+            </a>
+            <a href="../index.html" class="menu-link menu-link-sair">
+                Sair
+            </a>
         </nav>
-  
-
-        <div>
-            <a href="login.html">Sair</a>
-        </div>
 
     </header>
-    <main>
-        <section>
+    <main class="main">
 
-            <div>
-                <img
-                    src="https://via.placeholder.com/150"
-                    alt="Foto de perfil do usuário"
-                >
+        <section class="secao-perfil">
+            <div class="perfil-cabecalho">
+                <img src="https://via.placeholder.com/150" alt="Foto de perfil do usuário" class="perfil-foto">
+                <div class="perfil-info">
+                    <h2>Cauã</h2>
+                    <p class="usuario">@cauazinhopvpreidelas13</p>
+                    <p>Amante de música, descobrindo novos artistas e compartilhando minhas opiniões.</p>
+                    <p>📍 Belo Horizonte, Brasil</p>
+                    <button class="botao">Editar perfil</button>
+                </div>
             </div>
-
-            <div>
-                <h2>Cauã</h2>
-                <p>@cauazinhopvpreidelas13</p>
-
-                <p>
-                    Amante de música, descobrindo novos artistas
-                    e compartilhando minhas opiniões.
-                </p>
-
-                <p>
-                    📍 Belo Horizonte, Brasil
-                </p>
-
-                <button>Editar perfil</button>
-            </div>
-
         </section>
-        <section>
 
+        <section class="secao-estatisticas">
             <h2>Estatísticas</h2>
-
-            <div>
-
-                <article>
+            <div class="estatisticas-grid">
+                <article class="estatistica-card">
                     <h3>128</h3>
                     <p>Músicas avaliadas</p>
                 </article>
-
-                <article>
+                <article class="estatistica-card">
                     <h3>42</h3>
                     <p>Álbuns avaliados</p>
                 </article>
-
-                <article>
+                <article class="estatistica-card">
                     <h3>15</h3>
                     <p>Listas criadas</p>
                 </article>
-
-                <article>
+                <article class="estatistica-card">
                     <h3>37</h3>
                     <p>Seguidores</p>
                 </article>
-
             </div>
-
         </section>
-        <section>
 
+        <section class="secao-favoritos">
             <h2>Álbuns favoritos</h2>
-
-            <div>
-
-                <article>
-                    <img
-                        src="https://via.placeholder.com/180"
-                        alt="Capa do álbum"
-                    >
-
+            <div class="favoritos-grid">
+                <article class="favorito-card">
+                    <img src="https://via.placeholder.com/180" alt="Capa do álbum">
                     <h3>Álbum Favorito 1</h3>
                     <p>Artista</p>
                     <p>★★★★★</p>
                 </article>
-
-
-                <article>
-                    <img
-                        src="https://via.placeholder.com/180"
-                        alt="Capa do álbum"
-                    >
-
+                <article class="favorito-card">
+                    <img src="https://via.placeholder.com/180" alt="Capa do álbum">
                     <h3>Álbum Favorito 2</h3>
                     <p>Artista</p>
                     <p>★★★★★</p>
                 </article>
-
-
-                <article>
-                    <img
-                        src="https://via.placeholder.com/180"
-                        alt="Capa do álbum"
-                    >
-
+                <article class="favorito-card">
+                    <img src="https://via.placeholder.com/180" alt="Capa do álbum">
                     <h3>Álbum Favorito 3</h3>
                     <p>Artista</p>
                     <p>★★★★☆</p>
                 </article>
-
-
-                <article>
-                    <img
-                        src="https://via.placeholder.com/180"
-                        alt="Capa do álbum"
-                    >
-
+                <article class="favorito-card">
+                    <img src="https://via.placeholder.com/180" alt="Capa do álbum">
                     <h3>Álbum Favorito 4</h3>
                     <p>Artista</p>
                     <p>★★★★★</p>
                 </article>
-
             </div>
-
         </section>
-        <section>
 
+        <section class="secao-avaliacoes">
             <h2>Últimas avaliações</h2>
-
-            <article>
-
-                <img
-                    src="https://via.placeholder.com/100"
-                    alt="Capa do álbum"
-                >
-
-                <div>
-                    <h3>Nome do Álbum</h3>
-                    <p>Artista</p>
-                    <p>★★★★★</p>
-                    <p>
-                        "Um dos melhores álbuns que ouvi recentemente."
-                    </p>
-                    <small>Há 2 dias</small>
-                </div>
-
-            </article>
-
-
-            <article>
-
-                <img
-                    src="https://via.placeholder.com/100"
-                    alt="Capa do álbum"
-                >
-
-                <div>
-                    <h3>Outro Álbum</h3>
-                    <p>Outro Artista</p>
-                    <p>★★★★☆</p>
-                    <p>
-                        "Gostei bastante da produção e das músicas."
-                    </p>
-                    <small>Há 5 dias</small>
-                </div>
-
-            </article>
-
+            <div class="avaliacoes-lista">
+                <article class="avaliacao-card">
+                    <img src="https://via.placeholder.com/100" alt="Capa do álbum">
+                    <div>
+                        <h3>Nome do Álbum</h3>
+                        <p>Artista</p>
+                        <p>★★★★★</p>
+                        <p>"Um dos melhores álbuns que ouvi recentemente."</p>
+                        <small>Há 2 dias</small>
+                    </div>
+                </article>
+                <article class="avaliacao-card">
+                    <img src="https://via.placeholder.com/100" alt="Capa do álbum">
+                    <div>
+                        <h3>Outro Álbum</h3>
+                        <p>Outro Artista</p>
+                        <p>★★★★☆</p>
+                        <p>"Gostei bastante da produção e das músicas."</p>
+                        <small>Há 5 dias</small>
+                    </div>
+                </article>
+            </div>
         </section>
-        <section>
 
+        <section class="secao-listas">
             <h2>Minhas listas</h2>
-
-            <article>
-                <h3>Meus álbuns favoritos</h3>
-                <p>25 álbuns</p>
-                <a href="lista.html">Ver lista</a>
-            </article>
-
-            <article>
-                <h3>Para ouvir depois</h3>
-                <p>42 álbuns</p>
-                <a href="lista.html">Ver lista</a>
-            </article>
-
-            <article>
-                <h3>Descobertas de 2026</h3>
-                <p>18 álbuns</p>
-                <a href="lista.html">Ver lista</a>
-            </article>
-
+            <div class="listas-grid">
+                <article class="lista-card">
+                    <h3>Meus álbuns favoritos</h3>
+                    <p>25 álbuns</p>
+                    <a href="lista.html">Ver lista</a>
+                </article>
+                <article class="lista-card">
+                    <h3>Para ouvir depois</h3>
+                    <p>42 álbuns</p>
+                    <a href="lista.html">Ver lista</a>
+                </article>
+                <article class="lista-card">
+                    <h3>Descobertas de 2026</h3>
+                    <p>18 álbuns</p>
+                    <a href="lista.html">Ver lista</a>
+                </article>
+            </div>
         </section>
 
     </main>
-    <footer>
+    <footer class="footer">
+        <a class="logo logo-footer">
+            Harmoni<span>K</span><span class="logo-ponto">.</span>
+        </a>
 
-        <p>&copy; 2026 HarmoniK</p>
+        <p>Feito para quem sente a música. © 2026 HarmoniK.</p>
 
-        <nav>
-            <a href="#">Sobre</a>
-            <a href="#">Termos</a>
-            <a href="#">Privacidade</a>
-        </nav>
-
+        <a href="#topo" class="footer-voltar"
+           onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">
+            Voltar ao topo ↑
+        </a>
     </footer>
+
 
 </body>
 
 </html>
-```

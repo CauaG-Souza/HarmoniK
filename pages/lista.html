@@ -3,61 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Músicas favoritas - HarmoniK</title>
+    <title>Lista - HarmoniK</title>
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <link rel="stylesheet" href="../assets/css/lista.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="../assets/js/menu.js" defer></script>
 </head>
 <body>
-    <header>
-        <h1>HarmoniK</h1>
+    <header class="header">
 
-        <nav>
-            <a href="inicio.html">Início</a>
-            <a href="perfil.html">Perfil</a>
-            <a href="favoritas.html">Favoritas</a>
-            <a href="avaliar.html">Avaliar</a>
+        <a href="inicio.html" class="logo">
+            Harmoni<span>K</span><span class="logo-ponto">.</span>
+        </a>
+
+        <button
+            class="menu-btn"
+            id="menu-btn"
+            type="button"
+            aria-label="Abrir menu"
+            aria-controls="menu"
+            aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav class="menu" id="menu">
+            <a href="inicio.html" class="menu-link menu-link-ativo">Início</a>
+            <a href="musicas.html" class="menu-link">Explorar</a>
+            <a href="avaliar.html" class="menu-link">Avaliações</a>
+            <a href="perfil.html" class="menu-link">Perfil</a>
+            <a href="cadastro-musica.html" class="menu-link menu-link-destaque">
+                + Cadastrar música
+            </a>
+            <a href="../index.html" class="menu-link menu-link-sair">
+                Sair
+            </a>
         </nav>
+
     </header>
+    <main class="main">
 
-    <main>
-        <section>
-            <h2>Músicas favoritas</h2>
-            <p>Confira as músicas favoritas deste perfil.</p>
+        <section class="secao-cabecalho">
+            <h1>Músicas favoritas</h1>
+            <p class="subtitulo">Confira as músicas favoritas deste perfil.</p>
         </section>
 
-        <section>
-            <article>
-                <h3>Blinding Lights</h3>
-                <p>Artista: The Weeknd</p>
-                <p>Álbum: After Hours</p>
-                <p>Gênero: Pop</p>
-                <p>Ano: 2020</p>
-                <p>★★★★★</p>
-                
-            </article>
+        <section class="secao-lista">
+            <div class="musicas-grid">
 
-            <article>
-                <h3>Bohemian Rhapsody</h3>
-                <p>Artista: Queen</p>
-                <p>Álbum: A Night at the Opera</p>
-                <p>Gênero: Rock</p>
-                <p>Ano: 1975</p>
-                <p>★★★★★</p>
-                
-            </article>
+                <article class="musica-card">
+                    <h3>Blinding Lights</h3>
+                    <p>Artista: The Weeknd</p>
+                    <p>Álbum: After Hours</p>
+                    <p>Gênero: Pop</p>
+                    <p>Ano: 2020</p>
+                    <p class="avaliacao">★★★★★</p>
+                </article>
 
-            <article>
-                <h3>Lose Yourself</h3>
-                <p>Artista: Eminem</p>
-                <p>Álbum: 8 Mile</p>
-                <p>Gênero: Rap</p>
-                <p>Ano: 2002</p>
-                <p>★★★★★</p>
-                
-            </article>
+                <article class="musica-card">
+                    <h3>Bohemian Rhapsody</h3>
+                    <p>Artista: Queen</p>
+                    <p>Álbum: A Night at the Opera</p>
+                    <p>Gênero: Rock</p>
+                    <p>Ano: 1975</p>
+                    <p class="avaliacao">★★★★★</p>
+                </article>
+
+                <article class="musica-card">
+                    <h3>Lose Yourself</h3>
+                    <p>Artista: Eminem</p>
+                    <p>Álbum: 8 Mile</p>
+                    <p>Gênero: Rap</p>
+                    <p>Ano: 2002</p>
+                    <p class="avaliacao">★★★★★</p>
+                </article>
+
+            </div>
         </section>
+
     </main>
 
-    <footer>
-        <p>HarmoniK</p>
+    <footer class="footer">
+        <a class="logo logo-footer">
+            Harmoni<span>K</span><span class="logo-ponto">.</span>
+        </a>
+
+        <p>Feito para quem sente a música. © 2026 HarmoniK.</p>
+
+        <a href="#topo" class="footer-voltar"
+           onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">
+            Voltar ao topo ↑
+        </a>
     </footer>
+
 </body>
 </html>

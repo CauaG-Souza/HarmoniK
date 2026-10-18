@@ -9,17 +9,30 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="../assets/js/menu.js" defer></script>
 </head>
 <body>
     <header class="header">
 
-        <a class="logo">
+        <a href="../index.html" class="logo">
             Harmoni<span>K</span><span class="logo-ponto">.</span>
         </a>
-        <nav class="menu">
-                <a class="btn-animado" href="../index.html">Início</a>
-                <a class="btn-animado" href="cadastro.html">Cadastro</a>
-            </ul>
+
+        <button
+            class="menu-btn"
+            id="menu-btn"
+            type="button"
+            aria-label="Abrir menu"
+            aria-controls="menu"
+            aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav class="menu" id="menu">
+            <a href="cadastro.html" class="menu-link ">Cadastro</a>
+            <a href="login.html" class="menu-link menu-link-ativo">Login</a>
         </nav>
     </header>
     <main class="main">

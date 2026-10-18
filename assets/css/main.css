@@ -4,17 +4,13 @@
 
 html {
     scroll-behavior: smooth;
+    height: 100%;
 }
-
-body {
-    overflow-x: hidden;
-}
-
 
 :root {
     --cor-fundo: #17191B;
     --cor-superficie: #222725;
-    --fundo-card: rgb(255, 255, 255, 0.1);
+    --fundo-card: rgba(255, 255, 255, 0.1);
 
     --cor-primaria: #14532D;
     --cor-secundaria: #1F3D2B;
@@ -31,9 +27,9 @@ body {
 
     --gradiente-secundario: linear-gradient(
         135deg,
-        #17191B,
-        #2e2d35,
-        #17191B
+        #17191B 0%,
+        #202622 50%,
+        #17191B 100%
     );
 
     --borda-card: rgba(255, 255, 255, 0.12);
@@ -42,6 +38,7 @@ body {
 
 body {
     background: var(--gradiente-secundario);
+    background-attachment: fixed;
     color: var(--cor-texto);
     font-family: "Raleway", sans-serif;
     font-optical-sizing: auto;
@@ -49,6 +46,13 @@ body {
     font-style: normal;
     margin: 0;
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+main, .main {
+    flex: 1;
 }
 
 header {
@@ -73,18 +77,6 @@ img {
     height: auto;
 }
 
-footer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 12px;
-    background: var(--cor-secundaria);
-    padding: 20px;
-    margin-top: 50px;
-    text-align: center;
-}
-
 .header {
     position: relative;
     z-index: 100;
@@ -93,10 +85,8 @@ footer {
     justify-content: space-between;
     align-items: center;
     gap: 24px;
-
     width: 100%;
     padding: 22px max(5%, calc((100% - 1200px) / 2));
-
     background: rgba(23, 25, 27, 0.88);
     border-bottom: 1px solid rgba(255, 255, 255, 0.07);
     backdrop-filter: blur(18px);
@@ -126,15 +116,12 @@ footer {
     justify-content: center;
     align-items: center;
     gap: 5px;
-
     width: 46px;
     height: 46px;
     padding: 10px;
-
     background: rgba(34, 197, 94, 0.1);
     border: 1px solid rgba(34, 197, 94, 0.25);
     border-radius: 12px;
-
     cursor: pointer;
     transition: background 0.2s ease, border-color 0.2s ease;
 }
@@ -158,16 +145,13 @@ footer {
     flex-direction: column;
     align-items: stretch;
     gap: 5px;
-
     position: absolute;
     top: calc(100% + 12px);
     right: max(5%, calc((100% - 1200px) / 2));
     z-index: 1000;
-
     width: 260px;
     max-width: calc(100vw - 32px);
     padding: 10px;
-
     background: #202522;
     border: 1px solid var(--borda-card);
     border-radius: 16px;
@@ -182,15 +166,12 @@ footer {
 .menu-link {
     display: flex;
     align-items: center;
-
     width: 100%;
     padding: 13px 14px;
-
     color: var(--cor-texto-secundario);
     font-size: 14px;
     font-weight: 600;
     text-decoration: none;
-
     border-radius: 9px;
     transition: color 0.2s ease, background 0.2s ease;
 }
@@ -208,7 +189,6 @@ footer {
 .menu-link-destaque {
     justify-content: center;
     margin-top: 5px;
-
     color: #101810;
     background: var(--gradiente-principal);
 }
@@ -219,15 +199,25 @@ footer {
     filter: brightness(1.08);
 }
 
-.footer {
+.menu-link-sair {
+    justify-content: center;
+    margin-top: 5px;
+    color: #181010;
+    background: rgb(155, 47, 47);
+}
+
+.menu-link-sair:hover {
+    color: #181010;
+    background: rgb(155, 47, 47);
+    filter: brightness(1.08);
+}
+
+footer, .footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 22px;
-
-    margin-top: 10;
     padding: 28px max(5%, calc((100% - 1200px) / 2));
-
     background: rgba(15, 17, 16, 0.7);
     border-top: 1px solid var(--borda-card);
 }
@@ -236,9 +226,8 @@ footer {
     font-size: 23px;
 }
 
-.footer p {
+footer p, .footer p {
     margin: 0;
-
     color: var(--cor-texto-secundario);
     font-size: 11px;
     line-height: 1.8;
@@ -265,9 +254,8 @@ footer {
         gap: 14px;
     }
 
-    footer {
+    footer, .footer {
         padding: 18px 16px;
-        margin-top: 35px;
     }
 }
 
@@ -284,11 +272,11 @@ footer {
         gap: 12px;
     }
 
-    footer {
+    footer, .footer {
         flex-direction: column;
         padding: 16px 12px;
-        margin-top: 25px;
         font-size: 14px;
+        text-align: center;
     }
 }
 

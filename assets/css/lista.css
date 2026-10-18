@@ -1,0 +1,95 @@
+.main {
+    flex: 1;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.secao-cabecalho,
+.secao-lista {
+    margin-bottom: 30px;
+    padding: 20px;
+    border: 0.5px solid var(--borda-card);
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+.secao-cabecalho h1 {
+    font-size: 28px;
+    margin-top: 0;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.subtitulo {
+    text-align: center;
+    color: var(--cor-texto-secundario);
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 14px;
+}
+
+.musicas-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.musica-card {
+    padding: 20px;
+    border: 0.5px solid var(--borda-card);
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+}
+
+.musica-card:hover {
+    border: 1px solid white;
+    transition: all 0.3s ease;
+    transform: translateY(-2px);
+}
+
+.musica-card h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.musica-card p {
+    font-size: 14px;
+    margin: 4px 0;
+    color: var(--cor-texto-secundario);
+}
+
+.musica-card .avaliacao {
+    color: var(--cor-destaque);
+    margin-top: 10px;
+}
+
+.footer {
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid var(--borda-card);
+    background: rgba(15, 17, 16, 0.7);
+}
+
+.footer p {
+    margin: 0;
+    font-size: 12px;
+    color: var(--cor-texto-secundario);
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+    }
+
+    .menu {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .musicas-grid {
+        grid-template-columns: 1fr;
+    }
+}
