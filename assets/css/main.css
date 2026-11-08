@@ -290,3 +290,9 @@ footer p, .footer p {
         transition-duration: 0.01ms !important;
     }
 }
+
+/* --- Adições Funcionais (Refatoração) --- */
+.mensagem-sucesso { color: #22C55E; font-weight: 600; margin-bottom: 15px; }
+.mensagem-erro { color: #ff4d4d; font-weight: 600; margin-bottom: 15px; }
+.hidden { display: none !important; }
+.empty-state { text-align: center; color: var(--cor-texto-secundario); margin: 20px; font-style: italic;}
