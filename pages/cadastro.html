@@ -42,7 +42,7 @@
                 <h2>Formulário de Cadastro</h2>
             </div>
             <div class="form-main">
-                <form class ="cadastro" action="inicio.html" method="get">
+                <form id="form-cadastro" class="cadastro" action="inicio.html" method="get">
                     <label for="nome">Nome de usuário:</label>
                     <input type="text" 
                             id="nome" 
@@ -64,7 +64,8 @@
                             required
                     >
 
-                    <button type="submit">Cadastrar</button>
+                    <div id="feedback-cadastro"></div>
+<button type="submit">Cadastrar</button>
                 </div>
             </form>
         </section>
@@ -81,5 +82,6 @@
             Voltar ao topo ↑
         </a>
     </footer>
+<script src="../assets/js/app.js" defer></script>
 </body>
 </html>

@@ -41,7 +41,7 @@
                 <h2>Formulário de Login</h2>
             </div>
             <div class="form-main">
-            <form class="login" action="inicio.html" method="get">
+            <form id="form-login" class="login" action="inicio.html" method="get">
                 <label for="email">Email:</label>
                 <input type="email" 
                         id="email" 
@@ -56,7 +56,8 @@
                         required
                 >
 
-                <button type="submit">Entrar</button>
+                <div id="feedback-login"></div>
+<button type="submit">Entrar</button>
             </form>
         </div>
         </section>
@@ -73,5 +74,6 @@
             Voltar ao topo ↑
         </a>
     </footer>
+<script src="../assets/js/app.js" defer></script>
 </body>
 </html>
