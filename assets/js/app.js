@@ -156,6 +156,105 @@ function iniciarCadastroMusica() {
     });
 }
 
+function iniciarBuscaSpotify() {
+    const btnBuscar = document.querySelector("#btn-buscar-spotify");
+    const inputBusca = document.querySelector("#busca-spotify");
+    const divResultados = document.querySelector("#resultados-spotify");
+
+    if (!btnBuscar || !inputBusca || !divResultados) return;
+
+
+    const CLIENT_ID = "b9cc2718328a4df7a9cf8e43d8bd4373";
+    const CLIENT_SECRET = "0a7a5b2547c74f3197e1ea0bd74fee1a";
+
+    btnBuscar.addEventListener("click", async () => {
+        const termo = inputBusca.value.trim();
+        if (!termo) return;
+
+        divResultados.innerHTML = "<p class='muted'>Buscando no Spotify...</p>";
+
+        try {
+           
+            const tokenResponse = await fetch("https://accounts.spotify.com/api/token", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/x-www-form-urlencoded",
+                    "Authorization": "Basic " + btoa(CLIENT_ID + ":" + CLIENT_SECRET)
+                },
+                body: "grant_type=client_credentials"
+            });
+            
+            const tokenData = await tokenResponse.json();
+            const token = tokenData.access_token;
+
+          
+            const searchResponse = await fetch(`https://api.spotify.com/v1/search?q=${encodeURIComponent(termo)}&type=track&limit=4`, {
+                headers: { "Authorization": "Bearer " + token }
+            });
+
+            const searchData = await searchResponse.json();
+            const musicas = searchData.tracks.items;
+
+           
+            divResultados.innerHTML = "";
+            if (musicas.length === 0) {
+                divResultados.innerHTML = "<p class='mensagem-erro'>Nenhuma música encontrada.</p>";
+                return;
+            }
+
+            musicas.forEach(musica => {
+                
+                const capa = musica.album.images.length > 0 ? musica.album.images[0].url : "";
+                const ano = musica.album.release_date.substring(0, 4);
+                
+                const card = document.createElement("div");
+                card.style = "display: flex; align-items: center; gap: 15px; padding: 10px; background: rgba(255,255,255,0.05); border: 1px solid var(--borda-card); border-radius: 8px; cursor: pointer; transition: 0.3s;";
+                
+                card.innerHTML = `
+                    <img src="${capa}" alt="Capa" style="width: 50px; height: 50px; border-radius: 4px; object-fit: cover; background: #333;">
+                    <div style="flex: 1;">
+                        <h4 style="margin: 0; font-size: 14px; color: var(--cor-texto);">${musica.name}</h4>
+                        <p style="margin: 0; font-size: 12px; color: var(--cor-texto-secundario);">${musica.artists[0].name} • ${musica.album.name}</p>
+                    </div>
+                    <span style="font-size: 12px; color: var(--cor-destaque); font-weight: bold;">Selecionar</span>
+                `;
+
+                
+                card.addEventListener("click", () => {
+                    document.querySelector("#nome").value = musica.name;
+                    document.querySelector("#artista").value = musica.artists[0].name;
+                    document.querySelector("#album").value = musica.album.name;
+                    document.querySelector("#ano").value = ano;
+                    
+                    
+                    let inputCapa = document.querySelector("#capa-oculta");
+                    if(!inputCapa) {
+                        inputCapa = document.createElement("input");
+                        inputCapa.type = "hidden";
+                        inputCapa.id = "capa-oculta";
+                        inputCapa.name = "capa";
+                        document.querySelector("#form-musica").appendChild(inputCapa);
+                    }
+                    inputCapa.value = capa;
+
+                    divResultados.innerHTML = `<p class="mensagem-sucesso">Música selecionada! Selecione o gênero abaixo e salve.</p>`;
+                    inputBusca.value = "";
+                });
+
+                
+                card.addEventListener("mouseenter", () => card.style.background = "rgba(255,255,255,0.1)");
+                card.addEventListener("mouseleave", () => card.style.background = "rgba(255,255,255,0.05)");
+
+                divResultados.appendChild(card);
+            });
+
+        } catch (error) {
+            console.error("Erro na API do Spotify:", error);
+            divResultados.innerHTML = "<p class='mensagem-erro'>Falha ao conectar com o Spotify.</p>";
+        }
+    });
+}
+
 function iniciarAvaliacao() {
     const form = document.querySelector("#form-avaliacao");
     if (!form) return;
@@ -331,6 +430,7 @@ function iniciarPagina() {
 
     iniciarExplorar();
     iniciarCadastroMusica();
+    iniciarBuscaSpotify();
     iniciarAvaliacao();
     iniciarDetalhe();
     iniciarPerfil();

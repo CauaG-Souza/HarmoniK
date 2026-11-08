@@ -12,7 +12,8 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
 
     <script src="../assets/js/menu.js" defer></script>
 </head>
@@ -25,12 +26,7 @@
             Harmoni<span>K</span><span class="logo-ponto">.</span>
         </a>
 
-        <button
-            class="menu-btn"
-            id="menu-btn"
-            type="button"
-            aria-label="Abrir menu"
-            aria-controls="menu"
+        <button class="menu-btn" id="menu-btn" type="button" aria-label="Abrir menu" aria-controls="menu"
             aria-expanded="false">
             <span></span>
             <span></span>
@@ -55,6 +51,19 @@
             <h1>Cadastrar música</h1>
 
             <form action="musicas.html" method="get" id="form-musica" class="form-cadastro">
+
+                <div class="campo"
+                    style="margin-bottom: 25px; padding-bottom: 25px; border-bottom: 1px solid var(--borda-card);">
+                    <label for="busca-spotify" style="color: var(--cor-destaque); font-weight: bold;">🎵 Buscar dados no
+                        Spotify (Opcional)</label>
+                    <div style="display: flex; gap: 10px;">
+                        <input type="text" id="busca-spotify" placeholder="Digite o nome da música..." style="flex: 1;">
+                        <button type="button" id="btn-buscar-spotify" class="botao"
+                            style="margin-top: 0; width: auto; padding: 10px 20px;">Buscar</button>
+                    </div>
+                    <div id="resultados-spotify"
+                        style="margin-top: 15px; display: flex; flex-direction: column; gap: 10px;"></div>
+                </div>
 
                 <div class="campo">
                     <label for="nome">Nome da música</label>
@@ -91,7 +100,7 @@
                 </div>
 
                 <div id="feedback-musica"></div>
-<button type="submit" class="botao">Cadastrar música</button>
+                <button type="submit" class="botao">Cadastrar música</button>
 
             </form>
         </section>
@@ -105,13 +114,12 @@
 
         <p>Feito para quem sente a música. © 2026 HarmoniK.</p>
 
-        <a href="#topo" class="footer-voltar"
-           onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">
+        <a href="#topo" class="footer-voltar" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">
             Voltar ao topo ↑
         </a>
     </footer>
 
-<script src="../assets/js/app.js" defer></script>
+    <script src="../assets/js/app.js" defer></script>
 </body>
 
 </html>
