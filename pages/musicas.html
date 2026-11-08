@@ -71,7 +71,7 @@
         <section class="secao-filtros">
             <h3>Filtros e Ordenação</h3>
 
-            <form action="musicas.html" method="get" class="form-filtros">
+            <form action="musicas.html" method="get" id="form-filtros" class="form-filtros">
                 <div class="campo">
                     <label for="genero">Gênero</label>
                     <select id="genero" name="genero">
@@ -115,50 +115,15 @@
 
         <section class="secao-resultados">
             <h2>Músicas encontradas</h2>
+<p id="contador-musicas" style="color: var(--cor-destaque);"></p>
 
-            <div class="musicas-grid">
+            <div class="musicas-grid" id="lista-musicas">
 
-                <article class="musica-card">
-                    <h4>Blinding Lights</h4>
-                    <p>Artista: The Weeknd</p>
-                    <p>Álbum: After Hours</p>
-                    <p>Gênero: Pop</p>
-                    <p>Ano: 2020</p>
-                    <p>Avaliação: ★★★★★</p>
-                    <div class="card-acoes">
-                        <a href="musica.html">Ver detalhes</a>
-                        <a href="#">Editar</a>
-                        <a href="#">Excluir</a>
-                    </div>
-                </article>
+                
 
-                <article class="musica-card">
-                    <h4>Bohemian Rhapsody</h4>
-                    <p>Artista: Queen</p>
-                    <p>Álbum: A Night at the Opera</p>
-                    <p>Gênero: Rock</p>
-                    <p>Ano: 1975</p>
-                    <p>Avaliação: ★★★★★</p>
-                    <div class="card-acoes">
-                        <a href="musica.html">Ver detalhes</a>
-                        <a href="#">Editar</a>
-                        <a href="#">Excluir</a>
-                    </div>
-                </article>
+                
 
-                <article class="musica-card">
-                    <h4>Lose Yourself</h4>
-                    <p>Artista: Eminem</p>
-                    <p>Álbum: 8 Mile</p>
-                    <p>Gênero: Rap</p>
-                    <p>Ano: 2002</p>
-                    <p>Avaliação: ★★★★★</p>
-                    <div class="card-acoes">
-                        <a href="musica.html">Ver detalhes</a>
-                        <a href="#">Editar</a>
-                        <a href="#">Excluir</a>
-                    </div>
-                </article>
+                
 
             </div>
         </section>
@@ -178,6 +143,7 @@
         </a>
     </footer>
 
+<script src="../assets/js/app.js" defer></script>
 </body>
 
 </html>

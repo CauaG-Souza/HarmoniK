@@ -54,7 +54,7 @@
         <section class="secao-cadastro">
             <h1>Cadastrar música</h1>
 
-            <form action="musicas.html" method="get" class="form-cadastro">
+            <form action="musicas.html" method="get" id="form-musica" class="form-cadastro">
 
                 <div class="campo">
                     <label for="nome">Nome da música</label>
@@ -90,7 +90,8 @@
                     <input type="number" id="ano" name="ano" min="1900" max="2100" required>
                 </div>
 
-                <button type="submit" class="botao">Cadastrar música</button>
+                <div id="feedback-musica"></div>
+<button type="submit" class="botao">Cadastrar música</button>
 
             </form>
         </section>
@@ -110,6 +111,7 @@
         </a>
     </footer>
 
+<script src="../assets/js/app.js" defer></script>
 </body>
 
 </html>

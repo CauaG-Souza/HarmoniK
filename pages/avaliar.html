@@ -53,7 +53,7 @@
             <h1>Avaliar item</h1>
             <p class="subtitulo">Chegou a hora de avaliar algo!</p>
 
-            <form action="avaliar.html" method="post" class="form-avaliacao">
+            <form action="avaliar.html" method="post" id="form-avaliacao" class="form-avaliacao">
 
                 <div class="campo">
                     <label for="tipo">O que está avaliando?</label>
@@ -66,7 +66,7 @@
 
                 <div class="campo">
                     <label for="qual">Qual?</label>
-                    <select id="qual" name="qual">
+                    <select id="musica-avaliar" name="musica-avaliar">
                         <option value="album1">Álbum 1</option>
                         <option value="musica2">Música 2</option>
                         <option value="artista3">Artista 3</option>
@@ -75,7 +75,7 @@
 
                 <div class="campo">
                     <label for="avaliacao">Avaliação</label>
-                    <select id="avaliacao" name="avaliacao">
+                    <select id="nota" name="nota">
                         <option value="0">☆☆☆☆☆</option>
                         <option value="1">★☆☆☆☆</option>
                         <option value="2">★★☆☆☆</option>
@@ -90,10 +90,12 @@
                     <textarea id="comentario" name="comentario" rows="4" placeholder="Deixe sua opinião..."></textarea>
                 </div>
 
-                <button type="submit" class="botao">Enviar avaliação</button>
+                <div id="feedback-avaliacao"></div>
+<button type="submit" class="botao">Enviar avaliação</button>
 
             </form>
         </section>
+<section class="secao-avaliacoes" style="margin-top:40px; padding:30px; background: rgba(255,255,255,0.1); border-radius:10px;"><h2>Últimas Avaliações</h2><div id="lista-avaliacoes" class="avaliacoes-lista"></div></section>
 
     </main>
     <footer class="footer">
@@ -108,5 +110,6 @@
             Voltar ao topo ↑
         </a>
     </footer>
+<script src="../assets/js/app.js" defer></script>
 </body>
 </html>
